@@ -44,7 +44,7 @@ cd ADOL-C-2.5.2
 make && sudo make install
 # remove source file
 cd ../
-rm -rf ADOL-C-2.6.2
+rm -rf ADOL-C-2.5.2
 # get PDFlib-Lite
 wget http://www.pdflib.com/binaries/PDFlib/705/PDFlib-Lite-7.0.5p3.tar.gz
 tar xvf PDFlib-Lite-7.0.5p3.tar.gz
