@@ -17,7 +17,7 @@ cd ../../
 ./configure --enable-static coin_skip_warn_cxxflags=yes --prefix=$INSTALLDIR
 make && sudo make install
 # copy header files
-sudo cp Ipopt/src/* $INSTALLDIR/include/
+sudo cp -R Ipopt/src/* $INSTALLDIR/include/
 # remove source file
 cd ../
 rm -rf Ipopt-3.12.6
