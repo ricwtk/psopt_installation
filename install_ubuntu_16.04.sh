@@ -63,7 +63,7 @@ mv download gnuplot.tar.gz
 tar xvf gnuplot.tar.gz
 rm gnuplot.tar.gz
 # install dependencies
-sudo apt install libx11-dev libxt-dev libgd2-xpm-dev libreadline6-dev
+sudo apt -y install libx11-dev libxt-dev libgd2-xpm-dev libreadline6-dev
 # configure gnuplot-4.2.2
 cd gnuplot-4.2.2
 ./configure -with-readline=gnu -without-tutorial --prefix=$INSTALLDIR
