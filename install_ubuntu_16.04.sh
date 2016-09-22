@@ -79,6 +79,13 @@ wget https://github.com/PSOPT/psopt/archive/master.zip &&
 unzip master.zip &&
 mv psopt-master psopt &&
 rm master.zip
+# download SuiteSparse and lusol
+wget http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-4.4.3.tar.gz
+tar zxvf SuiteSparse-4.4.3.tar.gz
+rm SuiteSparse-4.4.3.tar.gz
+wget http://www.stanford.edu/group/SOL/software/lusol/lusol.zip
+unzip lusol.zip
+rm lusol.zip
 # use modified Makefile
 cp Makefile.psopt psopt/Makefile
 cp Makefile.psopt.dmatrix.lib psopt/dmatrix/lib/Makefile
