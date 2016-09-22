@@ -25,7 +25,7 @@ SNOPT_LIBS    =
 SPARSE_LIBS   = $(LUSOL)/liblusol.a  $(CXSPARSE)/Lib/libcxsparse.a -ldl
 # IPOPT_LIBS    =  $(IPOPTLIBDIR)/libipopt.a $(IPOPTLIBDIR)/libcoinhsl.a  $(IPOPTLIBDIR)/ThirdParty/libcoinmumps.a $(IPOPTLIBDIR)/ThirdParty/libcoinmetis.a -lpthread -lgfortran -lblas -llapack -latlas -lf77blas
 IPOPT_LIBS = `PKG_CONFIG_PATH=$(prefix)/lib64/pkgconfig:$(prefix)/lib/pkgconfig:$(prefix)/share/pkgconfig: /usr/bin/pkg-config --libs ipopt`
-ADOLC_LIBS    = -ladolc -lColPack
+ADOLC_LIBS    = $(prefix)/lib/libadolc.a $(prefix)/lib/libColPack.a
 PSOPT_LIBS    = $(PSOPTDIR)/lib/libpsopt.a
 DMATRIX_LIBS  = $(DMATRIXDIR)/lib/libdmatrix.a
 
