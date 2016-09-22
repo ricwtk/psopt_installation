@@ -31,144 +31,144 @@ $(LUSOL_LIBS):
 	(cp Makefile.lusol $(LUSOL)/Makefile; cd $(LUSOL); $(MAKE))
 
 $(DMATRIX_LIBS): $(DMATRIXDIR)/src/dmatrixv.cxx $(DMATRIXDIR)/include/dmatrixv.h
-	(cd $(DMATRIXDIR)/lib; $(MAKE)  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(DMATRIXDIR)/lib; $(MAKE)  USERHOME=$(USERHOME) prefix=$(prefix))
 
 
 dmatrix_examples:
-	(cd $(DMATRIXDIR)/examples; $(MAKE) all  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(DMATRIXDIR)/examples; $(MAKE) all  USERHOME=$(USERHOME) prefix=$(prefix))
 
 $(PSOPT_LIBS):
-	(cd $(PSOPTDIR)/lib; $(MAKE)  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(PSOPTDIR)/lib; $(MAKE)  USERHOME=$(USERHOME) prefix=$(prefix))
 
 bioreactor:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 brac1:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 
 shutt:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 
 manutec:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 missile:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 moon:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 stc1:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 
 brymr:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 twoburn:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 twolink:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 twophsc:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 twophro:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 hyper:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 
 launch:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 lambert:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 bryden:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 delay1:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 goddard:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 steps:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 sing5:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 climb:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 cracking:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 isop:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 catmix:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 chain:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 obstacle:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 crane:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 ipc:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 alpine:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 lts:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 user:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 coulomb:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 lowthr:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 heat:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 zpm:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 glider:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 notorious:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 reorientation:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 mpec:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 dae_i3:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 breakwell:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 rayleigh:
-	(cd $(EXAMPLESDIR)/$@; make $@  USERNAME=$(USERNAME) prefix=$(prefix))
+	(cd $(EXAMPLESDIR)/$@; make $@  USERHOME=$(USERHOME) prefix=$(prefix))
 
 test: launch
 	(cd $(EXAMPLESDIR)/launch; ./launch)

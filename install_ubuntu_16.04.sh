@@ -96,4 +96,4 @@ cp Makefile.psopt.PSOPT.lib psopt/PSOPT/lib/Makefile
 cp Makefile_linux.inc.psopt.PSOPT.examples psopt/PSOPT/examples/Makefile_linux.inc
 # make all
 cd psopt
-make all USERNAME=$ROOT prefix=$INSTALLDIR
+make all USERHOME=$ROOT prefix=$INSTALLDIR
