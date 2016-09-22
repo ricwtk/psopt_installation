@@ -4,11 +4,11 @@ INSTALLDIR=/usr
 # run this script from within the directory you want to install PSOPT
 sudo apt -y install g++ gfortran f2c libf2c2-dev libblas-dev libopenblas-dev libatlas-base-dev liblapack-dev cmake
 # get Ipopt
-wget http://www.coin-or.org/download/source/Ipopt/Ipopt-3.12.3.tgz
-tar xvf Ipopt-3.12.3.tgz
-rm Ipopt-3.12.3.tgz
+wget http://www.coin-or.org/download/source/Ipopt/Ipopt-3.12.6.tgz
+tar xvf Ipopt-3.12.6.tgz
+rm Ipopt-3.12.6.tgz
 # download thirdparty libraries
-cd Ipopt-3.12.3/ThirdParty/Metis
+cd Ipopt-3.12.6/ThirdParty/Metis
 ./get.Metis
 cd ../Mumps
 ./get.Mumps
@@ -20,7 +20,7 @@ make && sudo make install
 sudo cp -R Ipopt/src/* $INSTALLDIR/include/
 # remove source file
 cd ../
-rm -rf Ipopt-3.12.3
+rm -rf Ipopt-3.12.6
 # get ColPack
 wget http://cscapes.cs.purdue.edu/download/ColPack/ColPack-1.0.9.tar.gz
 tar xvf ColPack-1.0.9.tar.gz
@@ -34,17 +34,17 @@ make && sudo make install
 cd ../
 rm -rf ColPack-1.0.9
 # get ADOL-C
-wget http://www.coin-or.org/download/source/ADOL-C/ADOL-C-2.5.2.tgz
-tar xvf ADOL-C-2.5.2.tgz
-rm ADOL-C-2.5.2.tgz
+wget http://www.coin-or.org/download/source/ADOL-C/ADOL-C-2.6.2.tgz
+tar xvf ADOL-C-2.6.2.tgz
+rm ADOL-C-2.6.2.tgz
 # configure ADOL-C
-cd ADOL-C-2.5.2
+cd ADOL-C-2.6.2
 ./configure --enable-sparse --with-colpack=$INSTALLDIR --prefix=$INSTALLDIR
 # install
 make && sudo make install
 # remove source file
 cd ../
-rm -rf ADOL-C-2.5.2
+rm -rf ADOL-C-2.6.2
 # get PDFlib-Lite
 wget http://www.pdflib.com/binaries/PDFlib/705/PDFlib-Lite-7.0.5p3.tar.gz
 tar xvf PDFlib-Lite-7.0.5p3.tar.gz
