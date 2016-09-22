@@ -79,4 +79,12 @@ wget https://github.com/PSOPT/psopt/archive/master.zip &&
 unzip master.zip &&
 mv psopt-master psopt &&
 rm master.zip
-# Pause and output changes to be made to Makefiles
+# use modified Makefile
+cp Makefile.psopt psopt/Makefile
+cp Makefile.psopt.dmatrix.lib psopt/dmatrix/lib/Makefile
+cp Makefile.psopt.dmatrix.examples psopt/dmatrix/examples/Makefile
+cp Makefile.psopt.PSOPT.lib psopt/PSOPT/lib/Makefile
+cp Makefile_linux.inc.psopt.PSOPT.examples psopt/PSOPT/examples/Makefile_linux.inc
+# make all
+cd psopt
+make all target USERNAME=$ROOT prefix=$INSTALLDIR

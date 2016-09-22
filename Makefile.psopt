@@ -1,0 +1,195 @@
+SHELL         = /bin/sh
+F2CINC = $(F2CINCLUDE)
+F2CLIB = $(F2CLIBRARY)
+DMATRIXDIR=./dmatrix
+CXSPARSE=./SuiteSparse/CXSparse
+LUSOL=./lusol/csrc
+
+# Directory with header files
+IPOPTINCDIR = ${prefix}/include/coin
+# Directory with libipopt.a
+IPOPTLIBDIR = ${exec_prefix}/lib
+exec_prefix = ${prefix}
+
+PSOPTDIR    = ./PSOPT
+
+PSOPTSRCDIR = $(PSOPTDIR)/src
+EXAMPLESDIR = $(PSOPTDIR)/examples
+CXSPARSE_LIBS = $(CXSPARSE)/Lib/libcxsparse.a
+LUSOL_LIBS    = $(LUSOL)/liblusol.a
+SPARSE_LIBS   = $(CXSPARSE_LIBS) $(LUSOL_LIBS) -ldl
+ADOLC_LIBS    = -ladolc
+PSOPT_LIBS    = $(PSOPTDIR)/lib/libpsopt.a
+DMATRIX_LIBS  = $(DMATRIXDIR)/lib/libdmatrix.a
+
+
+$(CXSPARSE_LIBS):
+# 	(cp UFconfig.h $(CXSPARSE)/Include;cd $(CXSPARSE)/Lib; $(MAKE))
+	(cd $(CXSPARSE);cd ..;$(MAKE))
+
+$(LUSOL_LIBS):
+	(cp Makefile.lusol $(LUSOL)/Makefile; cd $(LUSOL); $(MAKE))
+
+$(DMATRIX_LIBS): $(DMATRIXDIR)/src/dmatrixv.cxx $(DMATRIXDIR)/include/dmatrixv.h
+	(cd $(DMATRIXDIR)/lib; $(MAKE) target USERNAME=$(USERNAME) prefix=$(prefix))
+
+
+dmatrix_examples:
+	(cd $(DMATRIXDIR)/examples; $(MAKE) all target USERNAME=$(USERNAME) prefix=$(prefix))
+
+$(PSOPT_LIBS):
+	(cd $(PSOPTDIR)/lib; $(MAKE) target USERNAME=$(USERNAME) prefix=$(prefix))
+
+bioreactor:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+brac1:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+
+shutt:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+
+manutec:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+missile:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+moon:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+stc1:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+
+brymr:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+twoburn:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+twolink:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+twophsc:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+twophro:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+hyper:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+
+launch:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+lambert:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+bryden:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+delay1:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+goddard:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+steps:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+sing5:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+climb:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+cracking:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+isop:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+catmix:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+chain:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+obstacle:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+crane:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+ipc:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+alpine:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+lts:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+user:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+coulomb:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+lowthr:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+heat:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+zpm:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+glider:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+notorious:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+reorientation:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+mpec:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+dae_i3:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+breakwell:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+rayleigh:
+	(cd $(EXAMPLESDIR)/$@; make $@ target USERNAME=$(USERNAME) prefix=$(prefix))
+
+test: launch
+	(cd $(EXAMPLESDIR)/launch; ./launch)
+
+
+all: $(CXSPARSE_LIBS) $(DMATRIX_LIBS) $(LUSOL_LIBS) $(PSOPT_LIBS) dmatrix_examples bioreactor brac1 shutt manutec missile moon stc1 sing5 steps brymr twoburn twolink twophsc twophro hyper launch lambert bryden delay1 goddard sing5 climb cracking isop catmix chain obstacle crane ipc alpine lts user  coulomb lowthr heat zpm glider notorious reorientation mpec dae_i3 breakwell rayleigh test
+
+
+clean:
+
+	(cd $(DMATRIXDIR)/lib; $(MAKE) clean)
+	(cd $(CXSPARSE)/Lib; $(MAKE) clean)
+	(cd $(LUSOL); $(MAKE) clean)
+	(cd $(DMATRIXDIR)/examples; $(MAKE) clean)
+	(cd $(PSOPTDIR)/lib; $(MAKE) clean)
+
+
+distclean:
+
+	(cd $(DMATRIXDIR)/lib; $(MAKE) distclean)
+	(cd $(CXSPARSE)/Lib; $(MAKE) distclean)
+	(cd $(LUSOL); $(MAKE) clean)
+	(cd $(DMATRIXDIR)/examples; $(MAKE) distclean)
+	(cd $(PSOPTDIR)/lib; $(MAKE) distclean)
