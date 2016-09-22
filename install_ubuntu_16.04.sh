@@ -17,7 +17,7 @@ cd ../../
 ./configure --enable-static coin_skip_warn_cxxflags=yes --prefix=$INSTALLDIR
 make && sudo make install
 # copy header files
-cp Ipopt/src/* $INSTALLDIR/include/
+sudo cp Ipopt/src/* $INSTALLDIR/include/
 # remove source file
 cd ../
 rm -rf Ipopt-3.12.6
@@ -34,11 +34,11 @@ make && sudo make install
 cd ../
 rm -rf ColPack-1.0.9
 # get ADOL-C
-wget http://www.coin-or.org/download/source/ADOL-C/ADOL-C-2.6.2.tgz
-tar xvf ADOL-C-2.6.2.tgz
-rm ADOL-C-2.6.2.tgz
+wget http://www.coin-or.org/download/source/ADOL-C/ADOL-C-2.5.2.tgz
+tar xvf ADOL-C-2.5.2.tgz
+rm ADOL-C-2.5.2.tgz
 # configure ADOL-C
-cd ADOL-C-2.6.2
+cd ADOL-C-2.5.2
 ./configure --enable-sparse --with-colpack=$INSTALLDIR --prefix=$INSTALLDIR
 # install
 make && sudo make install
@@ -96,4 +96,4 @@ cp Makefile.psopt.PSOPT.lib psopt/PSOPT/lib/Makefile
 cp Makefile_linux.inc.psopt.PSOPT.examples psopt/PSOPT/examples/Makefile_linux.inc
 # make all
 cd psopt
-make all target USERNAME=$ROOT prefix=$INSTALLDIR
+make all USERNAME=$ROOT prefix=$INSTALLDIR
