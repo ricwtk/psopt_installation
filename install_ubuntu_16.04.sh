@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 ROOT=$(pwd)
-INSTALLDIR=/usr/local
+INSTALLDIR=/usr
 # run this script from within the directory you want to install PSOPT
 sudo apt -y install g++ gfortran f2c libf2c2-dev libblas-dev libopenblas-dev libatlas-base-dev liblapack-dev cmake
 # get Ipopt
-wget http://www.coin-or.org/download/source/Ipopt/Ipopt-3.12.6.tgz
-tar xvf Ipopt-3.12.6.tgz
-rm Ipopt-3.12.6.tgz
+wget http://www.coin-or.org/download/source/Ipopt/Ipopt-3.12.3.tgz
+tar xvf Ipopt-3.12.3.tgz
+rm Ipopt-3.12.3.tgz
 # download thirdparty libraries
-cd Ipopt-3.12.6/ThirdParty/Metis
+cd Ipopt-3.12.3/ThirdParty/Metis
 ./get.Metis
 cd ../Mumps
 ./get.Mumps
@@ -20,7 +20,7 @@ make && sudo make install
 sudo cp -R Ipopt/src/* $INSTALLDIR/include/
 # remove source file
 cd ../
-rm -rf Ipopt-3.12.6
+rm -rf Ipopt-3.12.3
 # get ColPack
 wget http://cscapes.cs.purdue.edu/download/ColPack/ColPack-1.0.9.tar.gz
 tar xvf ColPack-1.0.9.tar.gz
