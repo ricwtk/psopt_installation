@@ -34,17 +34,17 @@ make && sudo make install
 cd ../
 rm -rf ColPack-1.0.9
 # get ADOL-C
-wget http://www.coin-or.org/download/source/ADOL-C/ADOL-C-2.6.2.tgz
-tar xvf ADOL-C-2.6.2.tgz
-rm ADOL-C-2.6.2.tgz
+wget http://www.coin-or.org/download/source/ADOL-C/ADOL-C-2.5.2.tgz
+tar xvf ADOL-C-2.5.2.tgz
+rm ADOL-C-2.5.2.tgz
 # configure ADOL-C
-cd ADOL-C-2.6.2
+cd ADOL-C-2.5.2
 ./configure --enable-sparse --with-colpack=$INSTALLDIR --prefix=$INSTALLDIR
 # install
 make && sudo make install
 # remove source file
 cd ../
-rm -rf ADOL-C-2.6.2
+rm -rf ADOL-C-2.5.2
 # get PDFlib-Lite
 wget http://www.pdflib.com/binaries/PDFlib/705/PDFlib-Lite-7.0.5p3.tar.gz
 tar xvf PDFlib-Lite-7.0.5p3.tar.gz
