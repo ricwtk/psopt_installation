@@ -30,7 +30,7 @@ PSOPT_LIBS    = $(PSOPTDIR)/lib/libpsopt.a
 DMATRIX_LIBS  = $(DMATRIXDIR)/lib/libdmatrix.a
 
 # LDFLAGS	      = -Wl,--rpath -Wl,$(USERHOME)/Ipopt-3.9.3/lib/coin -L$(IPOPTLIBDIR)  -lm  -ldl    -lgcc_s
-LDFLAGS	      = -Wl,--rpath -Wl,$(IPOPTLIBDIR)
+#LDFLAGS	      = -Wl,--rpath -Wl,$(IPOPTLIBDIR)
 
 CXX           = /usr/bin/g++
 CC            = /usr/bin/gcc
