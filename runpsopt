@@ -27,4 +27,11 @@ LIB64DIR=$PREFIX/lib64
 
 rm -f *.o
 
+if [[ -f ./$name_nosuffix ]]
+then
+  ./$name_nosuffix
+else
+  echo 'C++ script is not compiled. No executable is found.'
+fi
+
 cd $cdir
